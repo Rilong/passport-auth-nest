@@ -1,0 +1,13 @@
+<h1>{{ message }}</h1>
+<ul>
+    {{#each people}}
+    <li>{{name}}</li>
+    <li>{{email}}</li>
+    <li><a href="/delete/{{name}}">Delete</a></li>
+    {{/each}}
+</ul>
+<form action="/process" method="post">
+    <input type="text" name="name" placeholder="Name">
+    <input type="email" name="email" placeholder="E-mail">
+    <input type="submit" name="send" value="send">
+</form>
